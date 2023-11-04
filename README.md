@@ -1,6 +1,6 @@
 ```ts
 import { Config, Effect } from "effect";
-import { Database, createAdaptor } from "../src/bun";
+import { Database, createAdaptor } from "sqlfx-kysely/dist/bun";
 
 interface Tables {
 	users: { id: number };
