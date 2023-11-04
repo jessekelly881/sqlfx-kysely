@@ -5,18 +5,19 @@ interface Tables {
 	users: { id: number };
 }
 
-const DBAdaptor = createAdaptor<Tables>();
-const layer = DBAdaptor.makeLayer(
-	Config.succeed({
-		filename: ":memory:"
-	})
-);
+const Database = createAdaptor<Tables>();
 
 const db: Effect.Effect<Database<Tables>, never, void> = Effect.gen(function* (
 	_
 ) {
-	const { query } = yield* _(DBAdaptor.tag);
+	const { query } = yield* _(Database.tag);
 	query((db) => db.selectFrom("users"));
 });
+
+const layer = Database.makeLayer(
+	Config.succeed({
+		filename: ":memory:"
+	})
+);
 
 db.pipe(Effect.provide(layer));
