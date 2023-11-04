@@ -1,0 +1,43 @@
+{
+  "name": "@kellyjesse881/empty",
+  "version": "0.0.4",
+  "description": "",
+  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "homepage": "",
+  "tags": [
+    "typescript"
+  ],
+  "keywords": [
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsup src/**/*.ts --format cjs,esm --dts",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "dev": "vitest --reporter=dot",
+    "test": "vitest run --reporter=basic",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "publish": "changeset publish",
+    "docs": "docgen",
+    "gen": "plop"
+  },
+  "author": "Jesse Kelly",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@effect/docgen": "^0.2.1",
+    "@types/node": "^20.8.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "bun": "^1.0.7",
+    "eslint": "^8.51.0",
+    "eslint-plugin-deprecation": "^2.0.0",
+    "husky": "^8.0.3",
+    "plop": "^4.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Node.js & TypeScript",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "18"
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+        "source=${localWorkspaceFolderBasename}-dist,target=${containerWorkspaceFolder}/dist,type=volume",
+        "source=pnpm-cache,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
+    ],
+    "containerEnv": {
+        "CHOKIDAR_USEPOLLING": "true"
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    "postCreateCommand": "pnpm install"
+}
