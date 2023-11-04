@@ -1,5 +1,4 @@
 import { Config, Effect } from "effect";
-import { describe, expect, it } from "vitest";
 import { createAdaptor } from "../src/bun";
 
 interface Tables {
@@ -13,11 +12,7 @@ const layer = DBAdaptor.makeLayer(
 	})
 );
 
-Effect.gen(function* (_) {
+const s = Effect.gen(function* (_) {
 	const { query } = yield* _(DBAdaptor.tag);
 	query((db) => db.selectFrom("users"));
 }).pipe(Effect.provide(layer));
-
-describe("", () => {
-	it("", () => expect(1).toBe(1));
-});

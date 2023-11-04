@@ -13,23 +13,22 @@ import {
 	SqliteQueryCompiler
 } from "kysely";
 
-export const createAdaptor = <Tables>() => {
-	type QueryFn<T extends Compilable<unknown>> = (
-		db: Kysely<Tables>,
-		sql: KyselySql
-	) => T;
+type QueryFn<Tb, T extends Compilable<unknown>> = (
+	db: Kysely<Tb>,
+	sql: KyselySql
+) => T;
 
-	type KyselyRowResult<T extends Compilable<unknown>> =
-		InferResult<T>[number];
+type KyselyRowResult<T extends Compilable<unknown>> = InferResult<T>[number];
 
-	type Database = {
-		sql: Sql.SqliteClient;
-		query: <T extends Compilable<unknown>>(
-			queryFn: QueryFn<T>
-		) => Statement.Statement<KyselyRowResult<T>>;
-	};
+type Database<Tb> = {
+	sql: Sql.SqliteClient;
+	query: <T extends Compilable<unknown>>(
+		queryFn: QueryFn<Tb, T>
+	) => Statement.Statement<KyselyRowResult<T>>;
+};
 
-	const tag = Context.Tag<Database>("sqlfx-kysely/Database");
+export const createAdaptor = <Tables>(identifier?: string) => {
+	const tag = Context.Tag<Database<Tables>>(identifier);
 
 	type Transform = (typeof Transform)[keyof typeof Transform];
 	const Transform = {
@@ -81,7 +80,7 @@ export const createAdaptor = <Tables>() => {
 			});
 
 			const query = <T extends Compilable<unknown>>(
-				queryFn: QueryFn<T>
+				queryFn: QueryFn<Tables, T>
 			) => {
 				const { sql: querySql, parameters: queryParameters } = queryFn(
 					db,
