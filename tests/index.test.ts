@@ -1,5 +1,5 @@
 import { Config, Effect } from "effect";
-import { createAdaptor } from "../src/bun";
+import { Database, createAdaptor } from "../src/bun";
 
 interface Tables {
 	users: { id: number };
@@ -12,7 +12,11 @@ const layer = DBAdaptor.makeLayer(
 	})
 );
 
-const s = Effect.gen(function* (_) {
+const db: Effect.Effect<Database<Tables>, never, void> = Effect.gen(function* (
+	_
+) {
 	const { query } = yield* _(DBAdaptor.tag);
 	query((db) => db.selectFrom("users"));
-}).pipe(Effect.provide(layer));
+});
+
+db.pipe(Effect.provide(layer));
