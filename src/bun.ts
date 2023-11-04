@@ -20,7 +20,7 @@ type QueryFn<Tb, T extends Compilable<unknown>> = (
 
 type KyselyRowResult<T extends Compilable<unknown>> = InferResult<T>[number];
 
-type Database<Tb> = {
+export type Database<Tb> = {
 	sql: Sql.SqliteClient;
 	query: <T extends Compilable<unknown>>(
 		queryFn: QueryFn<Tb, T>
