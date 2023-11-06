@@ -13,7 +13,7 @@ devDependencies:
     version: 0.2.1(@types/node@20.8.10)(typescript@5.2.2)
   '@sqlfx/sql':
     specifier: ^0.30.1
-    version: 0.30.1(@effect/schema@0.47.2)(effect@2.0.0-next.54)
+    version: 0.30.2(@effect/schema@0.47.2)(effect@2.0.0-next.54)
   '@sqlfx/sqlite':
     specifier: ^0.30.1
     version: 0.30.1(@effect/schema@0.47.2)(effect@2.0.0-next.54)
@@ -293,7 +293,7 @@ packages:
       doctrine: 3.0.0
       fs-extra: 11.1.1
       glob: 10.3.10
-      markdown-toc: github.com/effect-ts/markdown-toc/4bfeb0f140105440ea0d12df2fa23199cc3ec1d5
+      markdown-toc: git@github.com+effect-ts/markdown-toc/4bfeb0f140105440ea0d12df2fa23199cc3ec1d5
       prettier: 2.8.8
       ts-morph: 19.0.0
       ts-node: 10.9.1(@types/node@20.8.10)(typescript@5.2.2)
@@ -911,8 +911,8 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@sqlfx/sql@0.30.1(@effect/schema@0.47.2)(effect@2.0.0-next.54):
-    resolution: {integrity: sha512-m6LYHeJjUTAgC9BkWq9HoF278Evdbrr6rZWUTRHe/uY67FPXyiEgKib9pb42dpPL57QO+UFvWe0Go9tvM7m5tQ==}
+  /@sqlfx/sql@0.30.2(@effect/schema@0.47.2)(effect@2.0.0-next.54):
+    resolution: {integrity: sha512-rzUoFIDuNPbhdTiuV9oRHoxAFB9YPPMF/HoGNVqAbv/EtRaAH6mPwaDU5JDAKvHOMYDNszLvB4C3sH0LrQTRfg==}
     peerDependencies:
       '@effect/schema': ^0.47.1
       effect: 2.0.0-next.54
@@ -939,7 +939,7 @@ packages:
       react-native-quick-sqlite:
         optional: true
     dependencies:
-      '@sqlfx/sql': 0.30.1(@effect/schema@0.47.2)(effect@2.0.0-next.54)
+      '@sqlfx/sql': 0.30.2(@effect/schema@0.47.2)(effect@2.0.0-next.54)
       effect: 2.0.0-next.54
     transitivePeerDependencies:
       - '@effect/schema'
@@ -5299,8 +5299,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  github.com/effect-ts/markdown-toc/4bfeb0f140105440ea0d12df2fa23199cc3ec1d5:
-    resolution: {tarball: https://codeload.github.com/effect-ts/markdown-toc/tar.gz/4bfeb0f140105440ea0d12df2fa23199cc3ec1d5}
+  git@github.com+effect-ts/markdown-toc/4bfeb0f140105440ea0d12df2fa23199cc3ec1d5:
+    resolution: {commit: 4bfeb0f140105440ea0d12df2fa23199cc3ec1d5, repo: git@github.com:effect-ts/markdown-toc.git, type: git}
     name: markdown-toc
     version: 1.2.0
     engines: {node: '>=0.10.0'}
