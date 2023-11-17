@@ -88,7 +88,7 @@ export const createAdaptor = <Tables>(identifier?: string) => {
 				).compile();
 				return sql.unsafe<KyselyRowResult<T>>(
 					querySql,
-					queryParameters as any[]
+					queryParameters as readonly Statement.Primitive[]
 				);
 			};
 
