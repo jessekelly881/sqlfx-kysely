@@ -1,5 +1,11 @@
 # @kellyjesse881/empty
 
+## 0.0.6
+
+### Patch Changes
+
+- 19f2d44: updated effect
+
 ## 0.0.4
 
 ### Patch Changes
