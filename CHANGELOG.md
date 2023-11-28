@@ -1,5 +1,11 @@
 # @kellyjesse881/empty
 
+## 0.0.8
+
+### Patch Changes
+
+- 1506ea9: updated effect
+
 ## 0.0.6
 
 ### Patch Changes
