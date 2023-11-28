@@ -12,11 +12,11 @@ devDependencies:
     specifier: ^0.2.1
     version: 0.2.1(@types/node@20.8.10)(typescript@5.2.2)
   '@sqlfx/sql':
-    specifier: ^0.31.1
-    version: 0.31.1(@effect/schema@0.48.1)(effect@2.0.0-next.55)
+    specifier: ^0.32.0
+    version: 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
   '@sqlfx/sqlite':
-    specifier: ^0.31.1
-    version: 0.31.1(@effect/schema@0.48.1)(effect@2.0.0-next.55)
+    specifier: ^0.32.0
+    version: 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
   '@types/node':
     specifier: ^20.8.4
     version: 20.8.10
@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^1.0.7
     version: 1.0.7
   effect:
-    specifier: 2.0.0-next.55
-    version: 2.0.0-next.55
+    specifier: 2.0.0-next.56
+    version: 2.0.0-next.56
   eslint:
     specifier: ^8.51.0
     version: 8.52.0
@@ -306,13 +306,13 @@ packages:
       - '@types/node'
     dev: true
 
-  /@effect/schema@0.48.1(effect@2.0.0-next.55)(fast-check@3.13.2):
-    resolution: {integrity: sha512-39rSG+hNG12ZpwTabe5YlXBPUyZgU+fakz5RUALa7ycLL5c3Fw9faZhAsxD0dFKzr0ADVLnKx1TCORVh73m4uQ==}
+  /@effect/schema@0.49.4(effect@2.0.0-next.56)(fast-check@3.13.2):
+    resolution: {integrity: sha512-Em5qFV7kXfHpt6n89B2Zwd0ccGgfFpZbBAfQuGPdw/zY18k01Tl3ufKfBA6fFphKQiWrU6JS9btTlq1+/WRRIg==}
     peerDependencies:
-      effect: 2.0.0-next.55
+      effect: 2.0.0-next.56
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.0.0-next.55
+      effect: 2.0.0-next.56
       fast-check: 3.13.2
     dev: true
 
@@ -911,22 +911,22 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@sqlfx/sql@0.31.1(@effect/schema@0.48.1)(effect@2.0.0-next.55):
-    resolution: {integrity: sha512-qc/8uP95Fb6rJn4IjXZ4yZs19sKpqDim8i9B+oiU5i5e74MY5iuVryeZEylOneiPAeupFdbSyGXo2+ObB2iYzw==}
+  /@sqlfx/sql@0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56):
+    resolution: {integrity: sha512-mjfNtsATZCcdRplD5TFzH0KyeDM83jmMLHYSqewTDPw/QUZA2WZIaZVHDKoFqAmOfEz7EKP3khWurRQjmzdnJA==}
     peerDependencies:
-      '@effect/schema': ^0.48.0
-      effect: 2.0.0-next.55
+      '@effect/schema': ^0.49.0
+      effect: 2.0.0-next.56
     dependencies:
-      '@effect/schema': 0.48.1(effect@2.0.0-next.55)(fast-check@3.13.2)
-      effect: 2.0.0-next.55
+      '@effect/schema': 0.49.4(effect@2.0.0-next.56)(fast-check@3.13.2)
+      effect: 2.0.0-next.56
     dev: true
 
-  /@sqlfx/sqlite@0.31.1(@effect/schema@0.48.1)(effect@2.0.0-next.55):
-    resolution: {integrity: sha512-WistKbWI8Eoa9BfERStMNWWr+uoPgnBUVQYIobWVkna2fKF5qNOap3iTkkI5fJg7by7+HmEDzQA5LBVZIa1y4A==}
+  /@sqlfx/sqlite@0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56):
+    resolution: {integrity: sha512-M+vCdaRH9lGn32tO3vRP22NpSt4Njwdlo4OWoaIA4uy9uUAlp/rHQyQg7bUMazE763knAY/elKSRBmKHoHolkg==}
     peerDependencies:
-      '@sqlite.org/sqlite-wasm': ^3.43.2-build1
+      '@sqlite.org/sqlite-wasm': 3.44.0-build2
       better-sqlite3: ^9
-      effect: 2.0.0-next.55
+      effect: 2.0.0-next.56
       expo-sqlite: ^11
       react-native-quick-sqlite: ^8
     peerDependenciesMeta:
@@ -939,8 +939,8 @@ packages:
       react-native-quick-sqlite:
         optional: true
     dependencies:
-      '@sqlfx/sql': 0.31.1(@effect/schema@0.48.1)(effect@2.0.0-next.55)
-      effect: 2.0.0-next.55
+      '@sqlfx/sql': 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
+      effect: 2.0.0-next.56
     transitivePeerDependencies:
       - '@effect/schema'
     dev: true
@@ -1935,8 +1935,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.0.0-next.55:
-    resolution: {integrity: sha512-kNOB/HaDSdaFSDVXK2gyf4XcTKbKKlllyoS871uDyoJskcc+024sSOHnNioXZPgkqaz55a3mad4DFfLUIETwYQ==}
+  /effect@2.0.0-next.56:
+    resolution: {integrity: sha512-Z6L9rf78OveZorl4pC82hUM/kNhQ8epChuCBVNIjVsookbb6iqTuP9goi3qi6CR7xUZE+HnOKF2bzMIdOOP+Vw==}
     dev: true
 
   /emoji-regex@10.3.0:
