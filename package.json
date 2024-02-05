@@ -1,6 +1,6 @@
 {
   "name": "sqlfx-kysely",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Use kysely with @sqlfx",
   "private": false,
   "main": "./dist/index.js",
