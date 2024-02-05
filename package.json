@@ -27,7 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
-    "@effect/docgen": "^0.2.1",
+    "@effect/docgen": "^0.3.8",
     "@sqlfx/sql": "^0.43.1",
     "@sqlfx/sqlite": "^0.43.1",
     "@types/node": "^20.8.4",
@@ -40,9 +40,9 @@
     "husky": "^9.0.10",
     "kysely": "^0.27.2",
     "plop": "^4.0.0",
-    "tsup": "^7.2.0",
+    "tsup": "^8.0.1",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.2"
+    "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "@sqlfx/sql": "^0.32.0",
