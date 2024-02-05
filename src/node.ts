@@ -99,10 +99,7 @@ export const createAdaptor = <Tables>(identifier?: string) => {
 		});
 
 	const makeLayer = (config: Config.Config.Wrap<DatabaseConfig>) =>
-		Layer.scoped(
-			tag,
-			Effect.flatMap(Effect.config(Config.unwrap(config)), make)
-		);
+		Layer.scoped(tag, Effect.flatMap(Config.unwrap(config), make));
 
 	return {
 		tag,

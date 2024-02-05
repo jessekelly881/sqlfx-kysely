@@ -12,11 +12,11 @@ devDependencies:
     specifier: ^0.2.1
     version: 0.2.1(@types/node@20.8.10)(typescript@5.2.2)
   '@sqlfx/sql':
-    specifier: ^0.32.0
-    version: 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
+    specifier: ^0.43.1
+    version: 0.43.1(@effect/schema@0.61.5)(effect@2.2.3)
   '@sqlfx/sqlite':
-    specifier: ^0.32.0
-    version: 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
+    specifier: ^0.43.1
+    version: 0.43.1(@effect/schema@0.61.5)(effect@2.2.3)
   '@types/node':
     specifier: ^20.8.4
     version: 20.8.10
@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^1.0.7
     version: 1.0.7
   effect:
-    specifier: 2.0.0-next.56
-    version: 2.0.0-next.56
+    specifier: 2.2.3
+    version: 2.2.3
   eslint:
     specifier: ^8.51.0
     version: 8.52.0
@@ -39,11 +39,11 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(eslint@8.52.0)(typescript@5.2.2)
   husky:
-    specifier: ^8.0.3
-    version: 8.0.3
+    specifier: ^9.0.10
+    version: 9.0.10
   kysely:
-    specifier: ^0.26.3
-    version: 0.26.3
+    specifier: ^0.27.2
+    version: 0.27.2
   plop:
     specifier: ^4.0.0
     version: 4.0.0
@@ -306,14 +306,14 @@ packages:
       - '@types/node'
     dev: true
 
-  /@effect/schema@0.49.4(effect@2.0.0-next.56)(fast-check@3.13.2):
-    resolution: {integrity: sha512-Em5qFV7kXfHpt6n89B2Zwd0ccGgfFpZbBAfQuGPdw/zY18k01Tl3ufKfBA6fFphKQiWrU6JS9btTlq1+/WRRIg==}
+  /@effect/schema@0.61.5(effect@2.2.3)(fast-check@3.15.1):
+    resolution: {integrity: sha512-Z+16tlYGSMQIcurMsIyhR1zlJnIRKxKc+/a0+sTums9VN52FXjQcDEhfhInYUWjhI81k8QkeG4TV6B3GyFKKMw==}
     peerDependencies:
-      effect: 2.0.0-next.56
+      effect: ^2.2.3
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.0.0-next.56
-      fast-check: 3.13.2
+      effect: 2.2.3
+      fast-check: 3.15.1
     dev: true
 
   /@esbuild/android-arm64@0.17.11:
@@ -911,23 +911,23 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@sqlfx/sql@0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56):
-    resolution: {integrity: sha512-mjfNtsATZCcdRplD5TFzH0KyeDM83jmMLHYSqewTDPw/QUZA2WZIaZVHDKoFqAmOfEz7EKP3khWurRQjmzdnJA==}
+  /@sqlfx/sql@0.43.1(@effect/schema@0.61.5)(effect@2.2.3):
+    resolution: {integrity: sha512-T4hnuA8FlEemyvFzfeA+JTgAMwfRLqEU66cfTZJIkafJUWcWj2xpjRSjQVztX55vLhT7bwnOsyYn0eaSbnlglg==}
     peerDependencies:
-      '@effect/schema': ^0.49.0
-      effect: 2.0.0-next.56
+      '@effect/schema': ^0.61.5
+      effect: ^2.2.0
     dependencies:
-      '@effect/schema': 0.49.4(effect@2.0.0-next.56)(fast-check@3.13.2)
-      effect: 2.0.0-next.56
+      '@effect/schema': 0.61.5(effect@2.2.3)(fast-check@3.15.1)
+      effect: 2.2.3
     dev: true
 
-  /@sqlfx/sqlite@0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56):
-    resolution: {integrity: sha512-M+vCdaRH9lGn32tO3vRP22NpSt4Njwdlo4OWoaIA4uy9uUAlp/rHQyQg7bUMazE763knAY/elKSRBmKHoHolkg==}
+  /@sqlfx/sqlite@0.43.1(@effect/schema@0.61.5)(effect@2.2.3):
+    resolution: {integrity: sha512-5SQigN8JfNEkkhXuBmDo8mpNG4o+yWcVK00LeX6yTZ2Z2nl7hBvSn9SCmxHQwIlRgIt0bY5Y46dmOt4VabStzA==}
     peerDependencies:
-      '@sqlite.org/sqlite-wasm': 3.44.0-build2
+      '@sqlite.org/sqlite-wasm': 3.45.0-build1
       better-sqlite3: ^9
-      effect: 2.0.0-next.56
-      expo-sqlite: ^11
+      effect: ^2.2.0
+      expo-sqlite: ^13
       react-native-quick-sqlite: ^8
     peerDependenciesMeta:
       '@sqlite.org/sqlite-wasm':
@@ -939,8 +939,8 @@ packages:
       react-native-quick-sqlite:
         optional: true
     dependencies:
-      '@sqlfx/sql': 0.32.0(@effect/schema@0.49.4)(effect@2.0.0-next.56)
-      effect: 2.0.0-next.56
+      '@sqlfx/sql': 0.43.1(@effect/schema@0.61.5)(effect@2.2.3)
+      effect: 2.2.3
     transitivePeerDependencies:
       - '@effect/schema'
     dev: true
@@ -1935,8 +1935,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.0.0-next.56:
-    resolution: {integrity: sha512-Z6L9rf78OveZorl4pC82hUM/kNhQ8epChuCBVNIjVsookbb6iqTuP9goi3qi6CR7xUZE+HnOKF2bzMIdOOP+Vw==}
+  /effect@2.2.3:
+    resolution: {integrity: sha512-9h1YbGAjmT0A6HLseMmp1OI7VIg8Ee1go+FVjilDvNAWoxvlzudu/eYSo3lqJz1/TjUxj115AytTmI3CeuaUCA==}
     dev: true
 
   /emoji-regex@10.3.0:
@@ -2275,8 +2275,8 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fast-check@3.13.2:
-    resolution: {integrity: sha512-ouTiFyeMoqmNg253xqy4NSacr5sHxH6pZpLOaHgaAdgZxFWdtsfxExwolpveoAE9CJdV+WYjqErNGef6SqA5Mg==}
+  /fast-check@3.15.1:
+    resolution: {integrity: sha512-GutOXZ+SCxGaFWfHe0Pbeq8PrkpGtPxA9/hdkI3s9YzqeMlrq5RdJ+QfYZ/S93jMX+tAyqgW0z5c9ppD+vkGUw==}
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.0.4
@@ -2756,9 +2756,9 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.10:
+    resolution: {integrity: sha512-TQGNknoiy6bURzIO77pPRu+XHi6zI7T93rX+QnJsoYFf3xdjKOur+IlfqzJGMHIK/wXrLg+GsvMs8Op7vI2jVA==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: true
 
@@ -3233,8 +3233,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /kysely@0.26.3:
-    resolution: {integrity: sha512-yWSgGi9bY13b/W06DD2OCDDHQmq1kwTGYlQ4wpZkMOJqMGCstVCFIvxCCVG4KfY1/3G0MhDAcZsip/Lw8/vJWw==}
+  /kysely@0.27.2:
+    resolution: {integrity: sha512-DmRvEfiR/NLpgsTbSxma2ldekhsdcd65+MNiKXyd/qj7w7X5e3cLkXxcj+MypsRDjPhHQ/CD5u3Eq1sBYzX0bw==}
     engines: {node: '>=14.0.0'}
     dev: true
 
